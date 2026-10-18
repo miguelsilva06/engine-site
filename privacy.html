@@ -32,7 +32,7 @@
     <p>You decide which services to connect, and you can disconnect them at any time in <em>Settings → Connections</em> or in that service's own settings. We only receive what you authorise.</p>
     <ul>
       <li><strong>Apple Health / Health Connect:</strong> HRV, resting heart rate, sleep and workouts.</li>
-      <li><strong>Strava:</strong> your activities, for display to you only. Strava data is never sent to the AI coach and is never shown to other users, as required by Strava's API terms.</li>
+      <li><strong>Strava:</strong> your activities, for display to you only. Strava data is never sent to the AI coach, is never shown to other users, and is kept for at most 7 days, as required by Strava's API terms.</li>
       <li><strong>intervals.icu, Garmin, Polar, Oura, WHOOP and other wearables</strong> (where available): activities and wellness data, according to the scopes you approve.</li>
     </ul>
 
@@ -53,6 +53,7 @@
     <ul>
       <li><strong>Supabase</strong> — database, sign-in and server functions. Data stored in the EU (Ireland).</li>
       <li><strong>Anthropic</strong> — AI coach (United States).</li>
+      <li><strong>OpenAI</strong> — turns voice messages to the coach into text, only when you use the microphone (United States). The audio is not kept by Engine.</li>
       <li><strong>RevenueCat, Apple App Store and Google Play</strong> — subscriptions and purchases.</li>
       <li><strong>Sentry</strong> — crash and error reports.</li>
       <li><strong>Expo</strong> — delivery of push notifications.</li>
@@ -63,7 +64,7 @@
     <p>Nothing is public by default. If you set up a public profile or publish a session, other users can see what you chose to share (for example the photo, caption and metrics you selected). You can unpublish at any time.</p>
 
     <h2>7. Security and retention</h2>
-    <p>Each record is protected by row-level security so only your account can read it. Tokens for connected services are stored server-side. We keep your data while your account exists. When you delete your account, your data is deleted from our systems.</p>
+    <p>Each record is protected by row-level security so only your account can read it. Tokens for connected services are stored server-side. We keep your data while your account exists. When you delete your account, your data is deleted from our systems and we revoke Engine's access to the services you connected.</p>
 
     <h2>8. Your rights</h2>
     <ul>
