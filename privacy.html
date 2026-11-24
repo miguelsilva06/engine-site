@@ -1,6 +1,14 @@
 <!doctype html>
 <html lang="en">
 <head>
+  <!--
+    DRAFT rewritten 2026-11-19 from what the app's code does. NOT verified legal text:
+    to be reviewed by a lawyer before launch.
+    Retention periods (section 8) approved by the founder on 2026-11-21 and enforced by
+    supabase/functions/retention-cron (numbers in supabase/functions/_shared/retentionPolicy.ts).
+    Unverified statements are marked with "TO CONFIRM" comments next to them.
+    Portuguese version: same page, from <h1 id="pt"> (same pattern as terms.html).
+  -->
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Engine Privacy Policy</title>
@@ -12,73 +20,275 @@
   <main class="doc">
     <a class="back" href="./">Engine</a>
     <h1>Privacy Policy</h1>
-    <p class="meta">Last updated: 3 October 2026</p>
+    <p class="meta">Last updated: 19 November 2026 · <a href="#pt">Português</a></p>
 
-    <p>Engine is a training, readiness and nutrition app for endurance athletes who also train strength. This policy explains what data the app uses, why, who processes it on our behalf, and the rights you have over it. We do not sell your data and we do not show advertising.</p>
+    <p>Engine is a training, readiness and nutrition app for endurance athletes who also train strength. This policy explains what data the app and this website use, why, on what legal basis, who receives it, how long it is kept and the rights you have over it. We do not sell your data and we do not show advertising.</p>
 
-    <h2>1. Data we collect</h2>
+    <h2>1. Who is responsible for your data</h2>
+    <p>The data controller is <strong>José Miguel Silva</strong>, Rua do Espinheiro, n.º 645, 4415-812 Sandim, Vila Nova de Gaia, Portugal, tax number (NIF) 275158306. Contact for any privacy question or request: <a href="mailto:getengine.app@gmail.com">getengine.app@gmail.com</a>. We have not appointed a data protection officer; requests go to that address.</p>
+
+    <h2>2. Data we use</h2>
+    <p><strong>Needed to use the app</strong> (without it we cannot run your account or calculate anything):</p>
     <ul>
-      <li><strong>Account:</strong> email address and sign-in method (email, Apple or Google).</li>
-      <li><strong>Profile you enter:</strong> age, sex, height, weight, thresholds (critical power, critical speed, CSS, heart-rate thresholds, lab tests), goals, nutrition targets, injuries and notes you choose to give the coach.</li>
-      <li><strong>Training:</strong> sessions you log in the app (including strength sets and loads) and sessions imported from services you connect.</li>
-      <li><strong>Health and recovery:</strong> heart-rate variability, resting heart rate, sleep and workouts read from Apple Health or Health Connect, only with the permissions you grant on your device.</li>
-      <li><strong>Nutrition:</strong> meals and foods you log.</li>
-      <li><strong>Daily check-in:</strong> how you rate sleep, stress, fatigue, mood and soreness.</li>
-      <li><strong>Coach conversations:</strong> the questions you ask the AI coach and its answers.</li>
-      <li><strong>Technical:</strong> crash and error reports, and a push-notification token if you allow notifications.</li>
+      <li><strong>Account:</strong> email address and password, or the identifier and email that Apple or Google give us if you sign in with them.</li>
+      <li><strong>Basic profile:</strong> the name you choose, age (you must be 18 or over), sex, height, weight, everyday activity level, the sports you practise, your goal and weekly availability.</li>
     </ul>
+    <p><strong>Optional</strong> (the app works without each of these; you give them only if you want the feature):</p>
+    <ul>
+      <li><strong>Thresholds and tests:</strong> critical power, critical speed, CSS, heart-rate thresholds, lab tests.</li>
+      <li><strong>Training:</strong> sessions you log in the app (including strength sets and loads, exercises you create, routes and GPX files) and sessions imported from services you connect, with their heart-rate, power, speed and altitude series.</li>
+      <li><strong>Health and recovery:</strong> heart-rate variability, resting heart rate, sleep, body weight and workouts read from Apple Health or Health Connect, only with the permissions you grant on your device, or received from a service you connect.</li>
+      <li><strong>Nutrition:</strong> meals and foods you log, and your nutrition goal.</li>
+      <li><strong>Daily check-in and session feedback:</strong> how you rate sleep, stress, fatigue, mood, soreness, effort and how a session felt; gut tolerance notes.</li>
+      <li><strong>Notes for the coach:</strong> injuries and anything else you choose to write down for it.</li>
+      <li><strong>AI coach:</strong> your questions and its answers, images and PDFs you attach, and voice notes you record (see section 5).</li>
+      <li><strong>Community:</strong> a public @handle, photo, bio, the sessions, photos, captions and stats you choose to publish, your comments, the users you block and the reports you send.</li>
+      <li><strong>Subscription:</strong> your plan, its status and renewal date. We never see your card or bank details: payment is handled by Apple or Google.</li>
+      <li><strong>Technical:</strong> crash and error reports, a push-notification token if you allow notifications, and a record of the consents you give or withdraw (which one, when, and the version of the text you saw).</li>
+    </ul>
+    <p>Health, training and nutrition data are health data, a special category under the GDPR. We process them only with your explicit consent, asked in the app before you enter the first number.</p>
 
-    <h2>2. Connected services</h2>
+    <h2>3. Why we use it and on what legal basis</h2>
+    <ul>
+      <li><strong>Running your account and subscription</strong> (sign-in, storing and showing your data, support, your plan) — performance of our contract with you, Art. 6(1)(b) GDPR.</li>
+      <li><strong>Calculating training load, thresholds, zones, readiness and nutrition targets from your health, training and nutrition data</strong> — your explicit consent, Art. 9(2)(a) and 6(1)(a). You withdraw it by deleting your account.</li>
+      <li><strong>The AI coach, automatic workout summaries, the weekly review and attachments</strong> — your separate consent, Art. 6(1)(a) and 9(2)(a). Off by default; on and off at any time in <em>Settings → Privacy</em>.</li>
+      <li><strong>Voice notes to the coach</strong> — the same AI consent, and only when you use the microphone.</li>
+      <li><strong>Connected services</strong> (importing your data, and sending planned workouts to intervals.icu) — your consent, given when you connect each service and withdrawn by disconnecting it.</li>
+      <li><strong>Publishing in the community</strong> — your consent, given when you make your profile or a session public and withdrawn by making it private again.</li>
+      <li><strong>Push notifications and emails about the launch</strong> — your consent (the device permission; the box on the website form).</li>
+      <li><strong>Error reports, abuse prevention, usage limits and security</strong> — our legitimate interest in keeping the service working and safe, Art. 6(1)(f). You can object (section 9).</li>
+      <li><strong>Reviewing reports of abusive content</strong> — our legitimate interest and legal obligations as a host of user content.</li>
+      <li><strong>Invoicing and accounting records</strong> — legal obligation, Art. 6(1)(c).</li>
+    </ul>
+    <p>Withdrawing a consent does not affect what was done before you withdrew it.</p>
+
+    <h2>4. Profiling and automated decisions</h2>
+    <p>Engine automatically calculates scores and estimates about you — readiness, training load, zones, thresholds, calorie and nutrient targets — and the coach writes suggestions from them. These are information for you. The coach proposes and you decide: a change to your plan is applied only when you accept it. Nothing in Engine takes a decision about you that has legal effects or similarly significant effects without a person involved.</p>
+
+    <h2>5. The AI coach</h2>
+    <p>The coach is powered by Claude, a model made by Anthropic. It is off until you turn it on. With your AI consent:</p>
+    <ul>
+      <li><strong>When you ask the coach something</strong>, the relevant parts of your profile, recent training, health and recovery data, nutrition, planned sessions, notes and the conversation are sent to Anthropic to generate the answer. If you attach images or PDFs (Pro plan), they are sent too. To answer some questions the coach can search the web through Anthropic; the search terms are written by the model.</li>
+      <li><strong>Automatic workout summary:</strong> when a new workout arrives, a one-sentence summary is generated from that workout's figures, your effort rating and what was planned for that day.</li>
+      <li><strong>Weekly review:</strong> once a week, a review of the week that ended is generated from the same kinds of data.</li>
+      <li><strong>Voice notes:</strong> when you use the microphone, the audio is sent to OpenAI to be turned into text. Engine does not keep the audio.</li>
+    </ul>
+    <!-- TO CONFIRM against the signed Anthropic and OpenAI terms/DPAs: no training on API data; their retention periods. -->
+    <p>Anthropic and OpenAI process this data as our processors, in the United States, under the European Commission's standard contractual clauses. Under their commercial terms they do not use it to train their models. If you turn the AI switch off, nothing more is sent to either of them, the three features above stop, and the rest of the app keeps working.</p>
+
+    <h2>6. Connected services</h2>
     <p>You decide which services to connect, and you can disconnect them at any time in <em>Settings → Connections</em> or in that service's own settings. We only receive what you authorise.</p>
     <ul>
-      <li><strong>Apple Health / Health Connect:</strong> HRV, resting heart rate, sleep and workouts.</li>
-      <li><strong>Strava:</strong> your activities, for display to you only. Strava data is never sent to the AI coach, is never shown to other users, and is kept for at most 7 days, as required by Strava's API terms.</li>
-      <li><strong>intervals.icu, Garmin, Polar, Oura, WHOOP and other wearables</strong> (where available): activities and wellness data, according to the scopes you approve.</li>
+      <li><strong>Apple Health / Health Connect:</strong> HRV, resting heart rate, sleep, weight and workouts, read on your device with the permissions you grant.</li>
+      <li><strong>intervals.icu:</strong> a source and a destination. We import your activities and wellness data (HRV, resting heart rate, sleep, weight) from it, and, if you use the feature, we send your planned workouts to your intervals.icu calendar so they reach your watch. Strength sessions are never sent. Devices such as Garmin reach Engine only through intervals.icu.</li>
+      <li><strong>Polar and, once available, Wahoo and Suunto</strong> (when connected): activities and recovery data, according to the scopes you approve.</li>
+      <li><strong>Strava:</strong> Engine does not connect to Strava. Data previously imported from Strava has been deleted.</li>
     </ul>
+    <p>Each of these services is an independent controller of the data it holds; its own privacy policy applies to it.</p>
 
-    <h2>3. How we use it</h2>
+    <h2>7. Who receives your data</h2>
+    <p>We use the following providers. Each receives only what is listed.</p>
     <ul>
-      <li>To calculate your training load, thresholds, zones, readiness and daily nutrition targets.</li>
-      <li>To show your data back to you across the app.</li>
-      <li>To let the AI coach answer your questions and adjust your plan (see section 4).</li>
-      <li>To publish a session or profile to the community, only when you choose to.</li>
-      <li>To keep the app working and fix errors.</li>
+      <li><strong>Supabase</strong> — database, sign-in, file storage and server functions. Receives all the data in section 2. Stored in the EU (Ireland).</li>
+      <li><strong>Anthropic</strong> (United States) — AI coach, automatic workout summaries, weekly review and attachments, as described in section 5; and the demo chat on this website (section 11). Standard contractual clauses.</li>
+      <li><strong>OpenAI</strong> (United States) — the audio of voice notes, to transcribe them. Standard contractual clauses.</li>
+      <!-- TO CONFIRM: that the Sentry project is in the EU (Germany) region. The DSN is not in the repository. -->
+      <li><strong>Sentry</strong> — crash, error and performance reports: technical details of the device and the app. Stored in the EU (Germany). By default no personal identifiers (name, email, IP address) are attached.</li>
+      <li><strong>RevenueCat</strong> (United States) — subscription status: your account identifier and purchase history. Standard contractual clauses.</li>
+      <li><strong>Apple App Store and Google Play</strong> — purchases and payment, as independent controllers.</li>
+      <li><strong>Apple and Google</strong> — sign-in, only if you choose Sign in with Apple or Google, and delivery of push notifications to your device.</li>
+      <li><strong>Expo</strong> (United States) — push notifications (your device's push token and the title and text of each notification) and app updates (your device asks Expo's servers for the update, which shows them its IP address, platform and app version). Standard contractual clauses.</li>
+      <li><strong>Open Food Facts</strong> (France) — when you scan a barcode, your device sends the barcode number to look up the product. Nothing about your account is sent.</li>
+      <li><strong>GitHub Pages</strong> (GitHub, United States) — hosts this website, and as host sees the IP address of visitors. Standard contractual clauses.</li>
+      <li><strong>The services you connect</strong> (section 6).</li>
     </ul>
-    <p>The legal bases are your consent (health data, connected services, the AI coach) and the performance of our contract with you (running your account and subscription).</p>
+    <!-- TO CONFIRM: a signed DPA with each processor above, and the transfer mechanism each one actually relies on (SCCs and/or EU–US Data Privacy Framework). -->
+    <p>Where data leaves the European Economic Area, it is protected by the European Commission's standard contractual clauses or by an adequacy decision. You can ask us for a copy of the safeguards. We do not share your data with anyone else, except where the law requires it.</p>
 
-    <h2>4. The AI coach</h2>
-    <p>The coach is powered by Claude, a model made by Anthropic. When you use the coach, the relevant parts of your profile, recent training (excluding Strava data), physiology, nutrition, planned sessions and notes are sent to Anthropic to generate the answer. Anthropic processes this data as our service provider and does not use it to train its models. You can withdraw your consent at any time in <em>Settings → AI coach</em>: nothing more is sent to Anthropic or OpenAI, and the rest of the app keeps working without it.</p>
-
-    <h2>5. Who processes your data</h2>
+    <h2>8. How long we keep it</h2>
+    <!-- Enforced by supabase/functions/retention-cron; change _shared/retentionPolicy.ts and delete-account.html together with this list. -->
     <ul>
-      <li><strong>Supabase</strong> — database, sign-in and server functions. Data stored in the EU (Ireland).</li>
-      <li><strong>Apple and Google</strong> — sign-in, only if you choose Sign in with Apple or Google.</li>
-      <li><strong>Open Food Facts</strong> — when you scan a barcode, only the barcode number is sent to look up the product.</li>
-      <li><strong>Anthropic</strong> — AI coach (United States).</li>
-      <li><strong>OpenAI</strong> — turns voice messages to the coach into text, only when you use the microphone (United States). The audio is not kept by Engine.</li>
-      <li><strong>RevenueCat, Apple App Store and Google Play</strong> — subscriptions and purchases.</li>
-      <li><strong>Sentry</strong> — crash and error reports.</li>
-      <li><strong>Expo</strong> — delivery of push notifications.</li>
+      <li><strong>Account data:</strong> while your account exists. When you delete your account it is deleted from our live systems immediately, and Engine's access to the services you connected is revoked.</li>
+      <li><strong>Backups:</strong> deleted data can remain in encrypted backups for up to 30 days before being overwritten.</li>
+      <li><strong>Server and technical logs:</strong> up to 30 days.</li>
+      <li><strong>Inactive accounts:</strong> if an account is not used for 24 months, we warn you by email or push notification; if it is still not used 30 days after the warning, it is deleted.</li>
+      <li><strong>Coach conversations:</strong> until you delete them or your account.</li>
+      <li><strong>Launch email list (website form):</strong> 12 months after you sign up, or until you ask to be removed; removed when you delete your account.</li>
+      <li><strong>Reports of abusive content:</strong> 12 months after the report is made.</li>
+      <li><strong>Record of your consents:</strong> while your account exists; deleted with it.</li>
+      <li><strong>Purchase records:</strong> kept by Apple or Google under their own policies; our accounting records are kept for the period required by tax law.</li>
     </ul>
-    <p>Where data leaves the EU, it is protected by the European Commission's standard contractual clauses or an equivalent safeguard.</p>
 
-    <h2>6. Community</h2>
-    <p>Nothing is public by default. If you set up a public profile or publish a session, other users can see what you chose to share (for example the photo, caption and metrics you selected). You can unpublish at any time. You can report a session, comment or profile, and block another user, from the menu on that content; we review reports and remove abusive content.</p>
-
-    <h2>7. Security and retention</h2>
-    <p>Each record is protected by row-level security so only your account can read it. Tokens for connected services are stored server-side. We keep your data while your account exists. When you delete your account, your data is deleted from our systems and we revoke Engine's access to the services you connected.</p>
-
-    <h2>8. Your rights</h2>
+    <h2>9. Your rights</h2>
+    <p>Under the GDPR you have the right to:</p>
     <ul>
-      <li>Access, correct or export your data. Export: <em>Settings → Export my data</em> gives you a JSON file with everything we hold about you.</li>
-      <li>Delete your account and data in the app: <em>Settings → Delete account</em>.</li>
-      <li>Withdraw consent for any connected service or the AI coach at any time.</li>
-      <li>Complain to your data-protection authority (in Portugal, the CNPD).</li>
+      <li><strong>Access</strong> your data and receive a copy. <em>Settings → Export my data</em> gives you a JSON file with what we hold about you. The 10-second series of each session (heart rate, power, speed, altitude) are not in that file because of their size; ask us by email and we will send them.</li>
+      <li><strong>Correct</strong> data that is wrong: most of it you can edit in the app.</li>
+      <li><strong>Delete</strong> your account and data: <em>Settings → Delete account</em>, or <a href="delete-account.html">ask us to do it</a>.</li>
+      <li><strong>Restrict</strong> the processing of your data, in the cases the law provides for.</li>
+      <li><strong>Portability:</strong> receive your data in a structured, machine-readable format (the export file).</li>
+      <li><strong>Object</strong> to processing based on our legitimate interest (error reports, security).</li>
+      <li><strong>Withdraw a consent</strong> at any time: the AI switch in <em>Settings → Privacy</em>, disconnecting a service, making your profile private, turning notifications off, or deleting your account.</li>
+      <li><strong>Not be subject</strong> to a decision based solely on automated processing that significantly affects you (see section 4).</li>
     </ul>
-    <p>Engine is only for people aged 18 and over.</p>
+    <p>To exercise any right, write to <a href="mailto:getengine.app@gmail.com">getengine.app@gmail.com</a>. We answer within one month. You also have the right to complain to a data-protection authority; in Portugal that is the Comissão Nacional de Proteção de Dados (CNPD), <a href="https://www.cnpd.pt">www.cnpd.pt</a>.</p>
 
-    <h2>9. Contact</h2>
-    <p>Questions or requests: <a href="mailto:getengine.app@gmail.com">getengine.app@gmail.com</a></p>
+    <h2>10. Community and security</h2>
+    <p>Nothing is public by default. If you make your profile public or publish a session, other Engine users can see your name, @handle and photo, and the sessions, photos, captions and stats you chose to publish, and your comments. You can unpublish at any time. You can report a session, comment or profile, and block another user, from the menu on that content.</p>
+    <p>Everything you have not published can be read only by your account: each record is protected by row-level security in the database. Tokens for connected services are stored server-side and never sent back to the app. Data travels encrypted (HTTPS).</p>
+
+    <h2>11. This website</h2>
+    <ul>
+      <li><strong>No cookies and no analytics.</strong></li>
+      <li><strong>Account form:</strong> creating an account here stores your email and password with our sign-in provider (Supabase), plus what you tell us you use today and how you reached the page, so that we can email you about your account and the launch. Legal basis: contract for the account, your consent for the emails.</li>
+      <li><strong>Demo chat:</strong> the coach on this page answers about an invented sample athlete. What you type is sent to Anthropic to generate the answer and is not stored by us. To limit abuse we keep, for 30 days, a daily counter tied to a one-way code derived from your IP address and the date; the IP address itself is never stored.</li>
+    </ul>
+
+    <h2>12. Age</h2>
+    <p>Engine is only for people aged 18 and over. We do not knowingly process data of anyone younger; if you believe someone under 18 has an account, write to us and we will delete it.</p>
+
+    <h2>13. Changes to this policy</h2>
+    <p>If we change this policy in a way that matters, we tell you in the app or by email before the change applies. If a change needs a new consent, we ask for it.</p>
+
+    <h2>14. Contact</h2>
+    <p>José Miguel Silva · Rua do Espinheiro, n.º 645, 4415-812 Sandim, Vila Nova de Gaia · NIF 275158306 · <a href="mailto:getengine.app@gmail.com">getengine.app@gmail.com</a></p>
+
+    <h1 id="pt" lang="pt-PT">Política de Privacidade</h1>
+    <div lang="pt-PT">
+    <p class="meta">Última atualização: 19 de novembro de 2026</p>
+
+    <p>O Engine é uma app de treino, prontidão e nutrição para atletas de endurance que também treinam força. Esta política explica que dados a app e este site usam, para quê, com que fundamento legal, quem os recebe, durante quanto tempo ficam guardados e que direitos tens sobre eles. Não vendemos os teus dados e não mostramos publicidade.</p>
+
+    <h2>1. Quem é responsável pelos teus dados</h2>
+    <p>O responsável pelo tratamento é <strong>José Miguel Silva</strong>, Rua do Espinheiro, n.º 645, 4415-812 Sandim, Vila Nova de Gaia, Portugal, NIF 275158306. Contacto para qualquer questão ou pedido sobre privacidade: <a href="mailto:getengine.app@gmail.com">getengine.app@gmail.com</a>. Não foi designado um encarregado de proteção de dados; os pedidos seguem para esse endereço.</p>
+
+    <h2>2. Dados que usamos</h2>
+    <p><strong>Necessários para usar a app</strong> (sem eles não conseguimos gerir a tua conta nem calcular nada):</p>
+    <ul>
+      <li><strong>Conta:</strong> email e palavra-passe, ou o identificador e o email que a Apple ou a Google nos dão se entrares com elas.</li>
+      <li><strong>Perfil base:</strong> o nome que escolheres, idade (tens de ter 18 anos ou mais), sexo, altura, peso, nível de atividade no dia a dia, os desportos que praticas, o teu objetivo e a disponibilidade semanal.</li>
+    </ul>
+    <p><strong>Opcionais</strong> (a app funciona sem cada um deles; só os dás se quiseres a funcionalidade):</p>
+    <ul>
+      <li><strong>Limiares e testes:</strong> potência crítica, velocidade crítica, CSS, limiares de frequência cardíaca, testes de laboratório.</li>
+      <li><strong>Treino:</strong> sessões que registas na app (incluindo séries e cargas de força, exercícios que criares, rotas e ficheiros GPX) e sessões importadas dos serviços que ligares, com as respetivas séries de frequência cardíaca, potência, velocidade e altitude.</li>
+      <li><strong>Saúde e recuperação:</strong> variabilidade da frequência cardíaca, frequência cardíaca de repouso, sono, peso e treinos lidos do Apple Health ou do Health Connect, só com as permissões que deres no teu dispositivo, ou recebidos de um serviço que ligares.</li>
+      <li><strong>Nutrição:</strong> refeições e alimentos que registas, e o teu objetivo nutricional.</li>
+      <li><strong>Check-in diário e avaliação das sessões:</strong> como avalias o sono, o stress, a fadiga, o humor, as dores musculares, o esforço e como correu uma sessão; notas de tolerância gastrointestinal.</li>
+      <li><strong>Notas para o coach:</strong> lesões e tudo o que decidires escrever para ele.</li>
+      <li><strong>Coach de IA:</strong> as tuas perguntas e as respostas, as imagens e PDF que anexares e as notas de voz que gravares (ver secção 5).</li>
+      <li><strong>Comunidade:</strong> um @ público, foto, bio, as sessões, fotos, legendas e estatísticas que decidires publicar, os teus comentários, os utilizadores que bloqueias e as denúncias que envias.</li>
+      <li><strong>Subscrição:</strong> o teu plano, o estado e a data de renovação. Nunca vemos os dados do teu cartão ou conta bancária: o pagamento é tratado pela Apple ou pela Google.</li>
+      <li><strong>Técnicos:</strong> relatórios de falhas e erros, um token de notificações push se as permitires, e o registo dos consentimentos que dás ou retiras (qual, quando e a versão do texto que viste).</li>
+    </ul>
+    <p>Os dados de saúde, treino e nutrição são dados de saúde, uma categoria especial no RGPD. Só os tratamos com o teu consentimento explícito, pedido na app antes de escreveres o primeiro número.</p>
+
+    <h2>3. Para que os usamos e com que fundamento legal</h2>
+    <ul>
+      <li><strong>Gerir a tua conta e subscrição</strong> (início de sessão, guardar e mostrar os teus dados, apoio, o teu plano) — execução do contrato contigo, art. 6.º, n.º 1, al. b) do RGPD.</li>
+      <li><strong>Calcular carga de treino, limiares, zonas, prontidão e objetivos nutricionais a partir dos teus dados de saúde, treino e nutrição</strong> — o teu consentimento explícito, art. 9.º, n.º 2, al. a) e art. 6.º, n.º 1, al. a). Podes retirá-lo eliminando a conta.</li>
+      <li><strong>O coach de IA, os resumos automáticos de treino, a revisão semanal e os anexos</strong> — o teu consentimento separado, art. 6.º, n.º 1, al. a) e art. 9.º, n.º 2, al. a). Desligado por omissão; ligas e desligas a qualquer momento em <em>Definições → Privacidade</em>.</li>
+      <li><strong>Notas de voz para o coach</strong> — o mesmo consentimento à IA, e só quando usas o microfone.</li>
+      <li><strong>Serviços ligados</strong> (importar os teus dados e enviar os treinos planeados para o intervals.icu) — o teu consentimento, dado quando ligas cada serviço e retirado quando o desligas.</li>
+      <li><strong>Publicar na comunidade</strong> — o teu consentimento, dado quando tornas público o perfil ou uma sessão e retirado quando os voltas a pôr privados.</li>
+      <li><strong>Notificações push e emails sobre o lançamento</strong> — o teu consentimento (a permissão do dispositivo; a caixa do formulário do site).</li>
+      <li><strong>Relatórios de erros, prevenção de abusos, limites de utilização e segurança</strong> — o nosso interesse legítimo em manter o serviço a funcionar e seguro, art. 6.º, n.º 1, al. f). Podes opor-te (secção 9).</li>
+      <li><strong>Analisar denúncias de conteúdo abusivo</strong> — o nosso interesse legítimo e as obrigações legais de quem aloja conteúdo de utilizadores.</li>
+      <li><strong>Faturação e registos contabilísticos</strong> — obrigação legal, art. 6.º, n.º 1, al. c).</li>
+    </ul>
+    <p>Retirar um consentimento não afeta o que foi feito antes de o retirares.</p>
+
+    <h2>4. Definição de perfis e decisões automatizadas</h2>
+    <p>O Engine calcula automaticamente pontuações e estimativas sobre ti — prontidão, carga de treino, zonas, limiares, objetivos de calorias e nutrientes — e o coach escreve sugestões a partir delas. São informação para ti. O coach propõe e tu decides: uma alteração ao teu plano só é aplicada quando a aceitas. Nada no Engine toma, sem intervenção humana, uma decisão sobre ti que produza efeitos jurídicos ou que te afete de forma igualmente significativa.</p>
+
+    <h2>5. O coach de IA</h2>
+    <p>O coach usa o Claude, um modelo da Anthropic. Fica desligado até o ligares. Com o teu consentimento à IA:</p>
+    <ul>
+      <li><strong>Quando perguntas alguma coisa ao coach</strong>, a parte relevante do teu perfil, treino recente, dados de saúde e recuperação, nutrição, sessões planeadas, notas e a conversa é enviada à Anthropic para gerar a resposta. Se anexares imagens ou PDF (plano Pro), também são enviados. Para responder a algumas perguntas o coach pode pesquisar na web através da Anthropic; os termos de pesquisa são escritos pelo modelo.</li>
+      <li><strong>Resumo automático do treino:</strong> quando chega um treino novo, é gerada uma frase de resumo a partir dos números desse treino, da tua avaliação do esforço e do que estava planeado para esse dia.</li>
+      <li><strong>Revisão semanal:</strong> uma vez por semana é gerada uma revisão da semana que terminou, a partir do mesmo tipo de dados.</li>
+      <li><strong>Notas de voz:</strong> quando usas o microfone, o áudio é enviado à OpenAI para ser convertido em texto. O Engine não guarda o áudio.</li>
+    </ul>
+    <!-- A CONFIRMAR nos termos/DPA assinados com a Anthropic e a OpenAI: não treinam com dados da API; prazos de conservação delas. -->
+    <p>A Anthropic e a OpenAI tratam estes dados como nossos subcontratantes, nos Estados Unidos, ao abrigo das cláusulas contratuais-tipo da Comissão Europeia. Nos termos comerciais de ambas, não os usam para treinar os seus modelos. Se desligares o interruptor da IA, nada mais é enviado a nenhuma delas, as três funcionalidades acima param e o resto da app continua a funcionar.</p>
+
+    <h2>6. Serviços ligados</h2>
+    <p>És tu que decides que serviços ligar, e podes desligá-los a qualquer momento em <em>Definições → Ligações</em> ou nas definições do próprio serviço. Só recebemos o que autorizares.</p>
+    <ul>
+      <li><strong>Apple Health / Health Connect:</strong> HRV, frequência cardíaca de repouso, sono, peso e treinos, lidos no teu dispositivo com as permissões que deres.</li>
+      <li><strong>intervals.icu:</strong> é origem e destino. Importamos de lá as tuas atividades e dados de bem-estar (HRV, frequência cardíaca de repouso, sono, peso) e, se usares a funcionalidade, enviamos os teus treinos planeados para o teu calendário do intervals.icu, para chegarem ao relógio. As sessões de força nunca são enviadas. Dispositivos como os da Garmin só chegam ao Engine através do intervals.icu.</li>
+      <li><strong>Polar e, quando disponíveis, Wahoo e Suunto</strong> (quando ligados): atividades e dados de recuperação, de acordo com as permissões que aprovares.</li>
+      <li><strong>Strava:</strong> o Engine não se liga ao Strava. Os dados antes importados do Strava foram apagados.</li>
+    </ul>
+    <p>Cada um destes serviços é responsável autónomo pelos dados que guarda; aplica-se-lhe a sua própria política de privacidade.</p>
+
+    <h2>7. Quem recebe os teus dados</h2>
+    <p>Usamos os seguintes fornecedores. Cada um recebe apenas o que está indicado.</p>
+    <ul>
+      <li><strong>Supabase</strong> — base de dados, início de sessão, armazenamento de ficheiros e funções de servidor. Recebe todos os dados da secção 2. Guardados na UE (Irlanda).</li>
+      <li><strong>Anthropic</strong> (Estados Unidos) — coach de IA, resumos automáticos de treino, revisão semanal e anexos, como descrito na secção 5; e o chat de demonstração deste site (secção 11). Cláusulas contratuais-tipo.</li>
+      <li><strong>OpenAI</strong> (Estados Unidos) — o áudio das notas de voz, para as transcrever. Cláusulas contratuais-tipo.</li>
+      <!-- A CONFIRMAR: que o projeto Sentry está na região UE (Alemanha). O DSN não está no repositório. -->
+      <li><strong>Sentry</strong> — relatórios de falhas, erros e desempenho: dados técnicos do dispositivo e da app. Guardados na UE (Alemanha). Por omissão não são anexados identificadores pessoais (nome, email, endereço IP).</li>
+      <li><strong>RevenueCat</strong> (Estados Unidos) — estado da subscrição: o identificador da tua conta e o histórico de compras. Cláusulas contratuais-tipo.</li>
+      <li><strong>Apple App Store e Google Play</strong> — compras e pagamento, como responsáveis autónomos.</li>
+      <li><strong>Apple e Google</strong> — início de sessão, só se escolheres entrar com a Apple ou a Google, e entrega das notificações push no teu dispositivo.</li>
+      <li><strong>Expo</strong> (Estados Unidos) — notificações push (o token push do teu dispositivo e o título e texto de cada notificação) e atualizações da app (o teu dispositivo pede a atualização aos servidores da Expo, que ficam a ver o endereço IP, a plataforma e a versão da app). Cláusulas contratuais-tipo.</li>
+      <li><strong>Open Food Facts</strong> (França) — quando lês um código de barras, o teu dispositivo envia o número do código para encontrar o produto. Nada sobre a tua conta é enviado.</li>
+      <li><strong>GitHub Pages</strong> (GitHub, Estados Unidos) — aloja este site e, como alojamento, vê o endereço IP de quem o visita. Cláusulas contratuais-tipo.</li>
+      <li><strong>Os serviços que ligares</strong> (secção 6).</li>
+    </ul>
+    <!-- A CONFIRMAR: DPA assinado com cada subcontratante acima, e o mecanismo de transferência em que cada um realmente assenta (cláusulas-tipo e/ou Data Privacy Framework UE–EUA). -->
+    <p>Quando os dados saem do Espaço Económico Europeu, ficam protegidos pelas cláusulas contratuais-tipo da Comissão Europeia ou por uma decisão de adequação. Podes pedir-nos cópia das garantias. Não partilhamos os teus dados com mais ninguém, exceto quando a lei o exigir.</p>
+
+    <h2>8. Durante quanto tempo os guardamos</h2>
+    <ul>
+      <li><strong>Dados da conta:</strong> enquanto a conta existir. Quando eliminas a conta, são apagados de imediato dos nossos sistemas em produção, e o acesso do Engine aos serviços que ligaste é revogado.</li>
+      <li><strong>Cópias de segurança:</strong> os dados apagados podem permanecer em cópias de segurança cifradas até 30 dias, até serem substituídas.</li>
+      <li><strong>Registos técnicos e de servidor:</strong> até 30 dias.</li>
+      <li><strong>Contas inativas:</strong> se uma conta não for usada durante 24 meses, avisamos-te por email ou notificação push; se continuar sem uso 30 dias depois do aviso, é eliminada.</li>
+      <li><strong>Conversas com o coach:</strong> até as apagares ou eliminares a conta.</li>
+      <li><strong>Lista de emails do lançamento (formulário do site):</strong> 12 meses depois de te inscreveres, ou até pedires para sair; removida quando eliminas a conta.</li>
+      <li><strong>Denúncias de conteúdo abusivo:</strong> 12 meses depois de a denúncia ser feita.</li>
+      <li><strong>Registo dos teus consentimentos:</strong> enquanto a conta existir; é apagado com ela.</li>
+      <li><strong>Registos de compra:</strong> guardados pela Apple ou pela Google segundo as suas políticas; os nossos registos contabilísticos ficam guardados pelo prazo exigido pela lei fiscal.</li>
+    </ul>
+
+    <h2>9. Os teus direitos</h2>
+    <p>O RGPD dá-te o direito de:</p>
+    <ul>
+      <li><strong>Aceder</strong> aos teus dados e receber uma cópia. <em>Definições → Exportar os meus dados</em> dá-te um ficheiro JSON com o que guardamos sobre ti. As séries de 10 segundos de cada sessão (frequência cardíaca, potência, velocidade, altitude) não vão nesse ficheiro por causa do tamanho; pede-as por email e enviamos.</li>
+      <li><strong>Retificar</strong> dados errados: a maior parte podes editar na app.</li>
+      <li><strong>Apagar</strong> a conta e os dados: <em>Definições → Eliminar conta</em>, ou <a href="delete-account.html#pt">pede-nos que o façamos</a>.</li>
+      <li><strong>Limitar</strong> o tratamento dos teus dados, nos casos previstos na lei.</li>
+      <li><strong>Portabilidade:</strong> receber os teus dados num formato estruturado e de leitura automática (o ficheiro de exportação).</li>
+      <li><strong>Opor-te</strong> ao tratamento que assenta no nosso interesse legítimo (relatórios de erros, segurança).</li>
+      <li><strong>Retirar um consentimento</strong> a qualquer momento: o interruptor da IA em <em>Definições → Privacidade</em>, desligar um serviço, pôr o perfil privado, desligar as notificações ou eliminar a conta.</li>
+      <li><strong>Não ficar sujeito</strong> a uma decisão tomada exclusivamente com base em tratamento automatizado que te afete de forma significativa (ver secção 4).</li>
+    </ul>
+    <p>Para exerceres qualquer direito, escreve para <a href="mailto:getengine.app@gmail.com">getengine.app@gmail.com</a>. Respondemos no prazo de um mês. Tens também o direito de apresentar reclamação a uma autoridade de proteção de dados; em Portugal é a Comissão Nacional de Proteção de Dados (CNPD), <a href="https://www.cnpd.pt">www.cnpd.pt</a>.</p>
+
+    <h2>10. Comunidade e segurança</h2>
+    <p>Nada é público por omissão. Se tornares o teu perfil público ou publicares uma sessão, os outros utilizadores do Engine podem ver o teu nome, @ e foto, as sessões, fotos, legendas e estatísticas que decidiste publicar, e os teus comentários. Podes despublicar a qualquer momento. Podes denunciar uma sessão, um comentário ou um perfil, e bloquear outro utilizador, no menu desse conteúdo.</p>
+    <p>Tudo o que não publicaste só pode ser lido pela tua conta: cada registo está protegido por segurança ao nível da linha na base de dados. Os tokens dos serviços ligados ficam guardados no servidor e nunca voltam à app. Os dados circulam cifrados (HTTPS).</p>
+
+    <h2>11. Este site</h2>
+    <ul>
+      <li><strong>Sem cookies e sem analítica.</strong></li>
+      <li><strong>Formulário de conta:</strong> criar conta aqui guarda o teu email e palavra-passe no nosso fornecedor de início de sessão (Supabase), mais o que nos disseres que usas hoje e como chegaste à página, para te podermos escrever sobre a tua conta e o lançamento. Fundamento: contrato, para a conta; o teu consentimento, para os emails.</li>
+      <li><strong>Chat de demonstração:</strong> o coach desta página responde sobre um atleta de exemplo inventado. O que escreves é enviado à Anthropic para gerar a resposta e não é guardado por nós. Para limitar abusos guardamos, durante 30 dias, um contador diário associado a um código irreversível derivado do teu endereço IP e da data; o endereço IP em si nunca é guardado.</li>
+    </ul>
+
+    <h2>12. Idade</h2>
+    <p>O Engine é só para pessoas com 18 anos ou mais. Não tratamos conscientemente dados de pessoas mais novas; se achares que alguém com menos de 18 anos tem conta, escreve-nos e eliminamo-la.</p>
+
+    <h2>13. Alterações a esta política</h2>
+    <p>Se alterarmos esta política de forma relevante, avisamos-te na app ou por email antes de a alteração se aplicar. Se uma alteração exigir um novo consentimento, pedimo-lo.</p>
+
+    <h2>14. Contacto</h2>
+    <p>José Miguel Silva · Rua do Espinheiro, n.º 645, 4415-812 Sandim, Vila Nova de Gaia · NIF 275158306 · <a href="mailto:getengine.app@gmail.com">getengine.app@gmail.com</a></p>
+    </div>
   </main>
 </body>
 </html>

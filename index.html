@@ -1,44 +1,512 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Engine</title>
-  <meta name="description" content="Training, readiness and fuel for endurance athletes who also lift. Science-based thresholds and an AI coach that can change your plan." />
-  <link rel="icon" href="logo.png" />
-  <link rel="stylesheet" href="style.css" />
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Engine — tune your engine: endurance, strength and nutrition in one plan</title>
+<meta name="description" content="Tune your engine. Endurance, strength, nutrition and recovery in one plan, with an AI coach that explains every change. For endurance athletes who also lift. EU-hosted." />
+<link rel="canonical" href="https://miguelsilva06.github.io/engine-site/" />
+<meta property="og:title" content="Engine — tune your engine." />
+<meta property="og:description" content="Endurance, strength, nutrition and recovery in one plan. For endurance athletes who also lift." />
+<meta property="og:type" content="website" />
+<meta name="theme-color" content="#050506" />
+<link rel="icon" href="logo.png" />
+<link rel="preload" href="fonts/ChakraPetch-Bold.ttf" as="font" type="font/ttf" crossorigin />
+<link rel="stylesheet" href="app.css" />
 </head>
 <body>
-  <header class="hero">
-    <img src="logo.png" alt="Engine logo" />
-    <h1>Train, recover and fuel from one model of you.</h1>
-    <p>Engine is for endurance athletes who also train strength. Your thresholds come from your own efforts, your readiness from your body, your daily fuel from the training you planned and the training you did.</p>
-  </header>
 
-  <section class="grid" aria-label="What Engine does">
-    <div class="card">
-      <h3>Thresholds that prove themselves</h3>
-      <p>Critical power, critical speed and CSS, checked against your best efforts and lab tests.</p>
-    </div>
-    <div class="card">
-      <h3>Readiness you can read</h3>
-      <p>HRV, resting heart rate, sleep and training load, with the reason behind every score.</p>
-    </div>
-    <div class="card">
-      <h3>Fuel for the day you'll have</h3>
-      <p>Calories and carbohydrate targets that move with planned and completed sessions.</p>
-    </div>
-    <div class="card">
-      <h3>A coach that edits the plan</h3>
-      <p>Ask, and the AI coach proposes concrete changes you approve with one tap.</p>
-    </div>
-  </section>
+<header class="nav"><div class="nav-in">
+  <a class="brand" href="./"><img src="logo.png" alt="" width="30" height="30" />Engine</a>
+  <nav class="links" aria-label="Sections"><a href="#all">What's inside</a><a href="#adapt">How it works</a><a href="#coach">Coach</a><a href="#pricing">Pricing</a><a href="#faq">FAQ</a></nav>
+  <a class="btn small" href="#founder">Create account</a>
+</div></header>
 
-  <footer>
-    <span>© 2026 Engine</span>
-    <a href="privacy.html">Privacy Policy</a>
-    <a href="terms.html">Terms of Service</a>
-    <a href="mailto:getengine.app@gmail.com">Contact</a>
-  </footer>
+<main>
+<section class="hero"><div class="wrap">
+  <div class="hero-top">
+    <h1><span class="ln"><span>Tune your</span></span><span class="ln"><span>engine.</span></span></h1>
+    <!-- A turbina de assets/brand/engine-mark-dark.svg. Só o grupo das pás roda, com uma única origem (CSS). -->
+    <div class="turbine" id="turbine">
+      <svg class="tb-svg" viewBox="0 0 200 200" aria-hidden="true" focusable="false">
+        <defs><mask id="tb-ticks" maskUnits="userSpaceOnUse" x="0" y="0" width="200" height="200"><path d="M40.6 159.4 L34.2 165.8 M31.2 148.2 L23.8 153.3 M23.9 135.5 L15.7 139.3 M18.9 121.7 L10.2 124.1 M16.3 107.3 L7.4 108.1 M16.3 92.7 L7.4 91.9 M18.9 78.3 L10.2 75.9 M23.9 64.5 L15.7 60.7 M31.2 51.8 L23.8 46.7 M40.6 40.6 L34.2 34.2 M51.8 31.2 L46.7 23.8 M64.5 23.9 L60.7 15.7 M78.3 18.9 L75.9 10.2 M92.7 16.3 L91.9 7.4 M107.3 16.3 L108.1 7.4 M121.7 18.9 L124.1 10.2 M135.5 23.9 L139.3 15.7 M148.2 31.2 L153.3 23.8 M159.4 40.6 L165.8 34.2 M168.8 51.8 L176.2 46.7 M176.1 64.5 L184.3 60.7 M181.1 78.3 L189.8 75.9 M183.7 92.7 L192.6 91.9 M183.7 107.3 L192.6 108.1 M181.1 121.7 L189.8 124.1 M176.1 135.5 L184.3 139.3 M168.8 148.2 L176.2 153.3 M159.4 159.4 L165.8 165.8" stroke="#fff" stroke-width="4.5" stroke-linecap="round" /></mask></defs>
+        <path d="M40.6 159.4 L34.2 165.8 M31.2 148.2 L23.8 153.3 M23.9 135.5 L15.7 139.3 M18.9 121.7 L10.2 124.1 M16.3 107.3 L7.4 108.1 M16.3 92.7 L7.4 91.9 M18.9 78.3 L10.2 75.9 M23.9 64.5 L15.7 60.7 M31.2 51.8 L23.8 46.7 M40.6 40.6 L34.2 34.2 M51.8 31.2 L46.7 23.8 M64.5 23.9 L60.7 15.7 M78.3 18.9 L75.9 10.2 M92.7 16.3 L91.9 7.4 M107.3 16.3 L108.1 7.4 M121.7 18.9 L124.1 10.2 M135.5 23.9 L139.3 15.7 M148.2 31.2 L153.3 23.8 M159.4 40.6 L165.8 34.2 M168.8 51.8 L176.2 46.7 M176.1 64.5 L184.3 60.7 M181.1 78.3 L189.8 75.9 M183.7 92.7 L192.6 91.9 M183.7 107.3 L192.6 108.1 M181.1 121.7 L189.8 124.1 M176.1 135.5 L184.3 139.3 M168.8 148.2 L176.2 153.3 M159.4 159.4 L165.8 165.8" stroke="#ffffff" stroke-opacity="0.14" stroke-width="4.5" stroke-linecap="round" />
+        <g mask="url(#tb-ticks)"><circle class="tb-arc" id="tb-arc" cx="100" cy="100" r="88.5" fill="none" stroke="#ff6b2c" stroke-width="16" pathLength="360" stroke-dasharray="195 400" transform="rotate(133 100 100)" /></g>
+        <g class="tb-rotor" id="tb-rotor"><use href="#rotor-shape" /></g>
+        <circle cx="100" cy="100" r="27" fill="#0f0d0c" stroke="#ff6b2c" stroke-width="6" />
+      </svg>
+      <p class="tb-read" aria-hidden="true"><span id="tb-state">idle</span> · <b id="tb-rpm">900</b> rpm</p>
+    </div>
+  </div>
+  <div class="hero-row fade">
+    <p class="sub">Endurance, strength, nutrition and recovery in one plan, with an AI coach and a community around it. For endurance athletes who also lift.</p>
+    <div class="cta"><a class="btn" href="#founder">Create your account</a><small>First 200 subscribers: Pro features at €79.99 a year.</small></div>
+  </div>
+
+  <div class="instr">
+    <div class="readout" aria-hidden="true">
+      <div><b id="r-w">350<small>W</small></b><span>power</span></div>
+      <div><b id="r-b">168<small>bpm</small></b><span>heart rate</span></div>
+      <div class="zone"><b id="r-z">Z4</b><span>zone</span></div>
+    </div>
+    <div class="ladder" id="ladder" role="slider" tabindex="0" aria-label="Power and heart rate on one line. Drag to read any point." aria-valuemin="155" aria-valuemax="403"></div>
+    <div class="instr-note"><span>Drag the line. Power and heart rate share one scale, aligned by physiology.</span><span>Sample athlete: critical power 350 W, measured 14 Oct, ±2%</span></div>
+  </div>
+</div></section>
+
+<div class="strip" aria-label="Works with"><div class="marquee">
+  <span>Apple Health</span><span>Health Connect</span><span>intervals.icu</span><span>Polar</span><span aria-hidden="true">Apple Health</span><span aria-hidden="true">Health Connect</span><span aria-hidden="true">intervals.icu</span><span aria-hidden="true">Polar</span>
+  <span aria-hidden="true">Apple Health</span><span aria-hidden="true">Health Connect</span><span aria-hidden="true">intervals.icu</span><span aria-hidden="true">Polar</span><span aria-hidden="true">Apple Health</span><span aria-hidden="true">Health Connect</span><span aria-hidden="true">intervals.icu</span><span aria-hidden="true">Polar</span>
+</div></div>
+
+<section class="block show-block" id="all"><div class="wrap">
+  <h2>Everything you train. One plan.</h2>
+  <p class="lede">Most apps do one thing. Engine counts all of it in one model of you, so every part knows what the others did.</p>
+  <div class="show" id="show">
+    <div class="show-tabs" role="tablist" aria-label="What Engine does" aria-orientation="vertical">
+      <button type="button" class="st" role="tab" id="st-endurance" aria-controls="sp-endurance" aria-selected="true"><span class="st-i"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="17" r="3.5"/><circle cx="18" cy="17" r="3.5"/><path d="M6 17l4-8h5l3 8M10 9l-1.5-3H7M15 9l-2 8"/></svg></span><b>Endurance</b><span class="st-bar" aria-hidden="true"><i></i></span></button>
+      <button type="button" class="st" role="tab" id="st-strength" aria-controls="sp-strength" aria-selected="false" tabindex="-1"><span class="st-i"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 10v4M6 8v8M18 8v8M21 10v4M6 12h12"/></svg></span><b>Strength</b><span class="st-bar" aria-hidden="true"><i></i></span></button>
+      <button type="button" class="st" role="tab" id="st-nutrition" aria-controls="sp-nutrition" aria-selected="false" tabindex="-1"><span class="st-i"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3c3 4 6 7 6 11a6 6 0 0 1-12 0c0-4 3-7 6-11z"/><path d="M12 11v6"/></svg></span><b>Nutrition</b><span class="st-bar" aria-hidden="true"><i></i></span></button>
+      <button type="button" class="st" role="tab" id="st-readiness" aria-controls="sp-readiness" aria-selected="false" tabindex="-1"><span class="st-i"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12h4l2-5 4 10 2-5h6"/></svg></span><b>Readiness</b><span class="st-bar" aria-hidden="true"><i></i></span></button>
+      <button type="button" class="st" role="tab" id="st-coach" aria-controls="sp-coach" aria-selected="false" tabindex="-1"><span class="st-i"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 10h8M8 13h5"/></svg></span><b>AI coach</b><span class="st-bar" aria-hidden="true"><i></i></span></button>
+      <button type="button" class="st" role="tab" id="st-community" aria-controls="sp-community" aria-selected="false" tabindex="-1"><span class="st-i"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="8" cy="9" r="3"/><circle cx="16" cy="9" r="3"/><path d="M3 19c0-3 2.5-5 5-5s5 2 5 5M11 19c0-3 2.5-5 5-5s5 2 5 5"/></svg></span><b>Community</b><span class="st-bar" aria-hidden="true"><i></i></span></button>
+      <button type="button" class="st" role="tab" id="st-share" aria-controls="sp-share" aria-selected="false" tabindex="-1"><span class="st-i"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12M7 8l5-5 5 5"/><path d="M5 13v6h14v-6"/></svg></span><b>Share</b><span class="st-bar" aria-hidden="true"><i></i></span></button>
+      <button type="button" class="st" role="tab" id="st-ranks" aria-controls="sp-ranks" aria-selected="false" tabindex="-1"><span class="st-i"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0z"/><path d="M7 6H4v2a3 3 0 0 0 3 3M17 6h3v2a3 3 0 0 1-3 3"/></svg></span><b>Ranks</b><span class="st-bar" aria-hidden="true"><i></i></span></button>
+    </div>
+
+    <div class="show-stage">
+      <!-- Uma moldura só, fixa; os ecrãs passam por dentro dela como quem desliza entre ecrãs da app. -->
+      <div class="ph-frame" aria-hidden="true"><span class="ph-island"></span></div>
+
+      <div class="sp on" id="sp-endurance" role="tabpanel" aria-labelledby="st-endurance" tabindex="0">
+        <div class="ph-screen"><div class="ph-in">
+          <div class="ph-bar"><b>Training</b><span>Tue 24 Nov</span></div>
+          <div class="ph-card en-card">
+            <div class="sx-head"><span class="pl-sport bike" aria-hidden="true"><svg><use href="#i-bike" /></svg></span><div><b>Bike · VO₂max 5 × 4 min</b><span>65 min · TSS 94</span></div><span class="pl-badge">Planned</span></div>
+            <div class="pl-strip en-strip" aria-hidden="true"><i style="--f:10;--z:#94A3B8;--h:.3"></i><i style="--f:5;--z:#60A5FA;--h:.45"></i><i style="--f:4;--z:#F87171;--h:1"></i><i style="--f:3;--z:#94A3B8;--h:.3"></i><i style="--f:4;--z:#F87171;--h:1"></i><i style="--f:3;--z:#94A3B8;--h:.3"></i><i style="--f:4;--z:#F87171;--h:1"></i><i style="--f:3;--z:#94A3B8;--h:.3"></i><i style="--f:4;--z:#F87171;--h:1"></i><i style="--f:3;--z:#94A3B8;--h:.3"></i><i style="--f:4;--z:#F87171;--h:1"></i><i style="--f:8;--z:#60A5FA;--h:.45"></i><i style="--f:10;--z:#94A3B8;--h:.3"></i></div>
+            <div class="en-axis" aria-hidden="true"><span>0</span><span>15</span><span>30</span><span>45</span><span>65 min</span></div>
+            <ol class="en-blocks">
+              <li><i style="--z:#60A5FA"></i><b>Warm-up</b><span>15 min</span><em>195–260 W</em></li>
+              <li><i style="--z:#F87171"></i><b>5 × 4 min</b><span>Z5</span><em>410 W</em></li>
+              <li><i style="--z:#94A3B8"></i><b>Recovery</b><span>3 min</span><em>185 W</em></li>
+              <li><i style="--z:#94A3B8"></i><b>Cool-down</b><span>18 min</span><em>195 W</em></li>
+            </ol>
+          </div>
+          <p class="ph-label">Thresholds</p>
+          <div class="en-ths">
+            <div class="en-th"><span>Critical power</span><b>350<small>W</small></b><em><i>Measured</i>14 Oct · ±2%</em></div>
+            <div class="en-th"><span>W′</span><b>18.0<small>kJ</small></b><em>Same efforts</em></div>
+            <div class="en-th"><span>Critical speed</span><b>3:50<small>/km</small></b><em><i>Measured</i>2 Nov · ±3%</em></div>
+          </div>
+          <p class="en-sent"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" /></svg>Sent to your watch via intervals.icu</p>
+        </div></div>
+        <div class="sp-copy">
+          <h3>Zones from your own efforts.</h3>
+          <p>Critical power, critical speed and CSS are fitted from your best efforts, with the date and the error shown. Every workout goes to your watch.</p>
+        </div>
+      </div>
+
+      <div class="sp" id="sp-strength" role="tabpanel" aria-labelledby="st-strength" tabindex="0">
+        <div class="ph-screen"><div class="ph-in">
+          <div class="ph-bar"><b>Training</b><span>Mon 23 Nov</span></div>
+          <div class="ph-card sx-sess">
+            <div class="sx-head"><span class="pl-sport lift" aria-hidden="true"><svg><use href="#i-lift" /></svg></span><div><b>Lower body, heavy</b><span>55 min</span></div><span class="pl-badge">Done</span></div>
+            <div class="ex">
+              <div class="ex-top"><b>Back squat</b><span>5 × 5 · RPE 8</span></div>
+              <ol class="sets5" aria-label="Five sets of 100 kilograms for 5 reps"><li><b>100</b><span>kg × 5</span></li><li><b>100</b><span>kg × 5</span></li><li><b>100</b><span>kg × 5</span></li><li><b>100</b><span>kg × 5</span></li><li><b>100</b><span>kg × 5</span></li></ol>
+            </div>
+            <div class="ex">
+              <div class="ex-top"><b>Romanian deadlift</b><span>3 × 8 · RPE 7</span></div>
+              <ol class="sets5" aria-label="Three sets of 80 kilograms for 8 reps"><li><b>80</b><span>kg × 8</span></li><li><b>80</b><span>kg × 8</span></li><li><b>80</b><span>kg × 8</span></li></ol>
+            </div>
+            <div class="sx-load"><span>Session load</span><b>62</b></div>
+          </div>
+          <div class="ph-card sx-week">
+            <div class="sx-wtop"><b>Training load this week</b><span>544 total</span></div>
+            <div class="wchart" role="img" aria-label="Training load by day. Monday gym 62. Tuesday bike 94. Wednesday run 55. Thursday gym 45 and bike 42. Friday rest. Saturday bike 172. Sunday run 74.">
+              <div class="wc"><div class="wbar"><i class="g" style="--v:62"></i><em>Squats</em></div><span>M</span></div>
+              <div class="wc"><div class="wbar"><i class="b" style="--v:94"></i></div><span>T</span></div>
+              <div class="wc"><div class="wbar"><i class="r" style="--v:55"></i></div><span>W</span></div>
+              <div class="wc"><div class="wbar"><i class="b" style="--v:42"></i><i class="g" style="--v:45"></i></div><span>T</span></div>
+              <div class="wc"><div class="wbar"></div><span>F</span></div>
+              <div class="wc"><div class="wbar"><i class="b" style="--v:172"></i></div><span>S</span></div>
+              <div class="wc"><div class="wbar"><i class="r" style="--v:74"></i></div><span>S</span></div>
+            </div>
+            <ul class="wkey"><li><i class="b"></i>Bike<b>308</b></li><li><i class="r"></i>Run<b>129</b></li><li><i class="g"></i>Gym<b>107</b></li></ul>
+            <p class="wcap">Strength counts: full weight on fatigue, a fifth on fitness.</p>
+          </div>
+        </div></div>
+        <div class="sp-copy">
+          <h3>Your gym counts as training.</h3>
+          <p>Log sets, reps and RPE. The session lands in the same weekly load as your rides and runs, so tomorrow's plan already knows about your legs.</p>
+        </div>
+      </div>
+
+      <div class="sp" id="sp-nutrition" role="tabpanel" aria-labelledby="st-nutrition" tabindex="0">
+        <div class="ph-screen"><div class="ph-in">
+          <div class="ph-bar"><b>Fuel</b><span>Sat 28 Nov · training day</span></div>
+          <div class="ph-card nu-day">
+            <div class="nu-kcal"><b>4,050</b><span>kcal today<br />rest day 2,650, white ticks</span></div>
+            <div class="nu-m" style="--w:100%;--r:50%;--c:#fbbf24"><div class="nu-l"><span>Carbs</span><b>660<small>g</small></b></div><u><i></i><s></s></u><em>8.9 g/kg · rest day 330 g</em></div>
+            <div class="nu-m" style="--w:21%;--r:21%;--c:#f472b6"><div class="nu-l"><span>Protein</span><b>140<small>g</small></b></div><u><i></i><s></s></u><em>1.9 g/kg · same every day</em></div>
+            <div class="nu-m" style="--w:14%;--r:13%;--c:#60a5fa"><div class="nu-l"><span>Fat</span><b>95<small>g</small></b></div><u><i></i><s></s></u><em>rest day 85 g</em></div>
+          </div>
+          <div class="wo">
+            <div class="pl-day"><span>Sat</span><b>28</b></div>
+            <span class="pl-sport bike" aria-hidden="true"><svg><use href="#i-bike" /></svg></span>
+            <div class="pl-info"><b>Long ride with tempo</b><span>3 h · TSS 172</span></div>
+            <span class="pl-badge">Planned</span>
+            <div class="pl-strip"><i style="--f:15;--z:#94A3B8;--h:.3"></i><i style="--f:60;--z:#60A5FA;--h:.45"></i><i style="--f:20;--z:#34D399;--h:.6"></i><i style="--f:40;--z:#60A5FA;--h:.45"></i><i style="--f:20;--z:#34D399;--h:.6"></i><i style="--f:15;--z:#60A5FA;--h:.45"></i><i style="--f:10;--z:#94A3B8;--h:.3"></i></div>
+          </div>
+          <ol class="nu-when">
+            <li><span>Before</span><b>110<small>g</small></b><em>3 h out</em></li>
+            <li class="mid"><span>During</span><b>70<small>g/h</small></b><em>750 ml/h</em></li>
+            <li><span>After</span><b>90<small>g</small></b><em>+ 30 g protein</em></li>
+          </ol>
+          <div class="ph-card nu-slots"><p class="ph-label">On the bike: 23 g every 20 min</p><ol aria-label="Nine feeds of 23 grams, from 20 minutes to 3 hours"><li><b>23</b><span>0:20</span></li><li><b>23</b><span>0:40</span></li><li><b>23</b><span>1:00</span></li><li><b>23</b><span>1:20</span></li><li><b>23</b><span>1:40</span></li><li><b>23</b><span>2:00</span></li><li><b>23</b><span>2:20</span></li><li><b>23</b><span>2:40</span></li><li><b>23</b><span>3:00</span></li></ol></div>
+        </div></div>
+        <div class="sp-copy">
+          <h3>Fuel that follows the plan.</h3>
+          <p>Targets rise on training days and come down on rest days. Every session gets its carbohydrate before, during and after, in grams.</p>
+        </div>
+      </div>
+
+      <div class="sp" id="sp-readiness" role="tabpanel" aria-labelledby="st-readiness" tabindex="0">
+        <div class="ph-screen"><div class="ph-in">
+          <div class="ph-bar"><b>Today</b><span>Tue 24 Nov · 7:05</span></div>
+          <div class="ph-card rd-score">
+            <div class="rd-ring" role="img" aria-label="Readiness 72 out of 100">
+              <svg viewBox="0 0 120 120" aria-hidden="true"><circle class="t" cx="60" cy="60" r="52" /><circle class="a" cx="60" cy="60" r="52" pathLength="100" /></svg>
+              <b>72</b>
+            </div>
+            <div><p class="rd-verdict">Train as planned</p><p class="rd-why">Everything sits inside your usual range. Today's VO₂max session stays.</p></div>
+          </div>
+          <div class="ph-card rd-hrv">
+            <div class="sx-wtop"><b>HRV, 7-day average</b><span><b class="rd-v">68 ms</b> · usual 62–74</span></div>
+            <svg class="rd-chart" viewBox="0 0 300 110" preserveAspectRatio="none" role="img" aria-label="HRV over 14 days, inside the usual band for the last week">
+              <rect class="band" x="0" y="34" width="300" height="38" />
+              <polyline class="ln" points="0,60 23,64 46,58 69,70 92,66 115,74 138,62 161,56 184,52 207,58 230,50 253,54 276,48 300,50" />
+            </svg>
+            <div class="rd-ax" aria-hidden="true"><span>11 Nov</span><span>band: smallest change that matters</span><span>Today</span></div>
+          </div>
+          <ul class="ph-card rd-rows">
+            <li><span>Resting heart rate</span><b>48 bpm</b><em class="up">↑ 1 vs usual 47</em></li>
+            <li><span>Sleep</span><b>7 h 40</b><em class="good">↑ 30 min vs usual</em></li>
+            <li><span>Load yesterday</span><b>62</b><em>Squats, as planned</em></li>
+          </ul>
+        </div></div>
+        <div class="sp-copy">
+          <h3>Readiness that shows its working.</h3>
+          <p>HRV, resting heart rate and sleep are read every morning against your own baseline, not an average. You see why the number is what it is.</p>
+        </div>
+      </div>
+
+      <div class="sp" id="sp-coach" role="tabpanel" aria-labelledby="st-coach" tabindex="0">
+        <div class="ph-screen"><div class="ph-in co-in">
+          <div class="co-top">
+            <svg viewBox="0 0 200 200" width="28" height="28" aria-hidden="true"><use href="#mark-compact" /><use href="#rotor-shape" /><circle cx="100" cy="100" r="27" fill="#0c0c0f" stroke="#ff6b2c" stroke-width="6" /></svg>
+            <div><b>engine</b><span>Mon 30 Nov, 19:40</span></div>
+          </div>
+          <div class="co-log">
+            <p class="bubble me co-1">Half marathon in 3 weeks. Do I keep lifting?</p>
+            <div class="bubble coach co-2">
+              <p>Yes, with less volume. Your fitness is 76 CTL and still rising. Strength keeps your legs robust; the volume is what costs you. Last heavy legs on Thu 10 Dec, ten days out, at half the sets. The Sunday long run stays.</p>
+              <div class="co-card" aria-label="Proposed changes">
+                <div class="wo chg">
+                  <div class="pl-day"><span>Thu</span><b>10</b></div>
+                  <span class="pl-sport lift" aria-hidden="true"><svg><use href="#i-lift" /></svg></span>
+                  <div class="pl-info"><b>Legs · back squat</b><span>4 × 6 → 2 × 5</span></div>
+                  <span class="pl-badge">Changed</span>
+                </div>
+                <div class="wo chg">
+                  <div class="pl-day"><span>Tue</span><b>8</b></div>
+                  <span class="pl-sport run" aria-hidden="true"><svg><use href="#i-run" /></svg></span>
+                  <div class="pl-info"><b>Run · 10 × 400 m</b><span>Wed 9 → Tue 8, off the leg day</span></div>
+                  <span class="pl-badge">Moved</span>
+                  <div class="pl-strip"><i style="--f:15;--z:#60A5FA;--h:.45"></i><i style="--f:2;--z:#F87171;--h:.88"></i><i style="--f:1.5;--z:#94A3B8;--h:.3"></i><i style="--f:2;--z:#F87171;--h:.88"></i><i style="--f:1.5;--z:#94A3B8;--h:.3"></i><i style="--f:2;--z:#F87171;--h:.88"></i><i style="--f:1.5;--z:#94A3B8;--h:.3"></i><i style="--f:2;--z:#F87171;--h:.88"></i><i style="--f:1.5;--z:#94A3B8;--h:.3"></i><i style="--f:2;--z:#F87171;--h:.88"></i><i style="--f:1.5;--z:#94A3B8;--h:.3"></i><i style="--f:2;--z:#F87171;--h:.88"></i><i style="--f:1.5;--z:#94A3B8;--h:.3"></i><i style="--f:2;--z:#F87171;--h:.88"></i><i style="--f:1.5;--z:#94A3B8;--h:.3"></i><i style="--f:2;--z:#F87171;--h:.88"></i><i style="--f:1.5;--z:#94A3B8;--h:.3"></i><i style="--f:2;--z:#F87171;--h:.88"></i><i style="--f:1.5;--z:#94A3B8;--h:.3"></i><i style="--f:2;--z:#F87171;--h:.88"></i><i style="--f:10;--z:#94A3B8;--h:.3"></i></div>
+                </div>
+                <div class="co-act" aria-hidden="true"><span class="go">Apply both</span><span>Not now</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="co-ask" aria-hidden="true"><span>Ask about training, or Engine</span><i>Ask</i></div>
+        </div></div>
+        <div class="sp-copy">
+          <h3>It explains every change. You approve.</h3>
+          <p>Ask about a race, a trip or a hard week. The coach reads your load, proposes the changes with the reason, and waits for your yes.</p>
+        </div>
+      </div>
+
+      <div class="sp" id="sp-community" role="tabpanel" aria-labelledby="st-community" tabindex="0">
+        <div class="ph-screen"><div class="ph-in">
+          <div class="ph-bar"><b>Social</b><span>Following</span></div>
+          <div class="ph-card cm-post">
+            <div class="cm-who"><span class="cm-av" aria-hidden="true">MA</span><div><b>Marta</b><span>Sun 22 Nov · Run</span></div></div>
+            <p class="cm-title">Long run with hills</p>
+            <div class="cm-nums"><div><b>21.4<small>km</small></b><span>Distance</span></div><div><b>1:48</b><span>Time</span></div><div><b>5:02<small>/km</small></b><span>Pace</span></div><div><b>+410<small>m</small></b><span>Climb</span></div></div>
+            <div class="pl-strip cm-strip" aria-hidden="true"><i style="--f:10;--z:#94A3B8;--h:.3"></i><i style="--f:25;--z:#60A5FA;--h:.45"></i><i style="--f:6;--z:#34D399;--h:.6"></i><i style="--f:12;--z:#60A5FA;--h:.45"></i><i style="--f:6;--z:#34D399;--h:.6"></i><i style="--f:12;--z:#60A5FA;--h:.45"></i><i style="--f:6;--z:#34D399;--h:.6"></i><i style="--f:25;--z:#60A5FA;--h:.45"></i><i style="--f:10;--z:#94A3B8;--h:.3"></i></div>
+            <div class="cm-react"><span class="cm-kudo"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z" /></svg>You cheered</span><span class="cm-stack" aria-hidden="true"><i>TI</i><i>AN</i><i>RU</i></span><em>Tiago, Ana, Rui</em></div>
+          </div>
+          <div class="ph-card cm-ch">
+            <div class="sx-wtop"><b>Club challenge</b><span>Ends Sun</span></div>
+            <p class="cm-chn">Most Z2 hours this week</p>
+            <ol class="cm-lb">
+              <li><span>1</span><b>Tiago</b><u style="--w:100%"><i></i></u><em>6 h 10</em></li>
+              <li><span>2</span><b>Marta</b><u style="--w:84%"><i></i></u><em>5 h 12</em></li>
+              <li class="me"><span>3</span><b>You</b><u style="--w:70%"><i></i></u><em>4 h 20</em></li>
+            </ol>
+          </div>
+          <p class="cm-priv"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2" /><path d="M8 11V8a4 4 0 0 1 8 0v3" /></svg>Profiles are private by default. You choose who follows you.</p>
+        </div></div>
+        <div class="sp-copy">
+          <h3>Your friends' training, in one feed.</h3>
+          <p>Follow friends, cheer their sessions and join a weekly club challenge. Nobody sees your profile until you say so.</p>
+        </div>
+      </div>
+
+      <div class="sp" id="sp-share" role="tabpanel" aria-labelledby="st-share" tabindex="0">
+        <div class="ph-screen"><div class="ph-in sh-in">
+          <div class="ph-bar"><b>Share</b><span>Tue 24 Nov</span></div>
+          <div class="story-card" role="img" aria-label="Story card: Bike, VO2max 5 by 4 minutes, Tuesday 24 November. Average power 288 watts, TSS 94, 1 hour 5 minutes.">
+            <svg class="story-bg" viewBox="0 0 200 200" aria-hidden="true"><use href="#mark-compact" /></svg>
+            <div class="story-top">
+              <svg viewBox="0 0 200 200" width="26" height="26" aria-hidden="true"><use href="#mark-compact" /><use href="#rotor-shape" /><circle cx="100" cy="100" r="27" fill="#0c0c0f" stroke="#ff6b2c" stroke-width="6" /></svg>
+              <b>engine</b>
+            </div>
+            <div class="story-title"><span>Tue 24 Nov 2026</span><b>Bike · VO₂max 5 × 4 min</b></div>
+            <div class="story-hero"><b>288<small>W</small></b><span>Average power</span></div>
+            <div class="story-row"><div><b>94</b><span>TSS</span></div><div><b>1:05</b><span>Duration</span></div><div><b>410<small>W</small></b><span>Intervals</span></div></div>
+            <div class="pl-strip story-strip" aria-hidden="true"><i style="--f:10;--z:#94A3B8;--h:.3"></i><i style="--f:5;--z:#60A5FA;--h:.45"></i><i style="--f:4;--z:#F87171;--h:1"></i><i style="--f:3;--z:#94A3B8;--h:.3"></i><i style="--f:4;--z:#F87171;--h:1"></i><i style="--f:3;--z:#94A3B8;--h:.3"></i><i style="--f:4;--z:#F87171;--h:1"></i><i style="--f:3;--z:#94A3B8;--h:.3"></i><i style="--f:4;--z:#F87171;--h:1"></i><i style="--f:3;--z:#94A3B8;--h:.3"></i><i style="--f:4;--z:#F87171;--h:1"></i><i style="--f:8;--z:#60A5FA;--h:.45"></i><i style="--f:10;--z:#94A3B8;--h:.3"></i></div>
+          </div>
+          <div class="share-to" aria-hidden="true"><span>Instagram</span><span>WhatsApp</span><span>Save</span></div>
+          <p class="share-note">Sized 9:16 for stories. Your fitness curve gets a card too.</p>
+        </div></div>
+        <div class="sp-copy">
+          <h3>Every session, ready for your story.</h3>
+          <p>Finish a session and Engine makes a clean card with the numbers that matter. One tap to Instagram, WhatsApp or your camera roll.</p>
+        </div>
+      </div>
+
+      <div class="sp" id="sp-ranks" role="tabpanel" aria-labelledby="st-ranks" tabindex="0">
+        <div class="ph-screen"><div class="ph-in">
+          <div class="ph-bar"><b>Ranks</b><span>Engine tiers</span></div>
+          <div class="ph-card rk-me">
+            <div class="rk-badge">
+              <span class="rk-shield" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3l7 3v5.5c0 4.6-3 8-7 9.5-4-1.5-7-4.9-7-9.5V6z" /></svg></span>
+              <div><b>Strong</b><span>2,269 points</span></div>
+            </div>
+            <div class="rk-prog">
+              <div class="rk-pl"><span>Strong</span><span>331 to High-Output</span></div>
+              <u><i></i></u>
+              <ol class="rk-ladder" aria-label="Tiers: Idle, Warming, Tuned, Strong, High-Output, Race-Ready, Full Engine"><li></li><li></li><li></li><li class="on"></li><li></li><li></li><li></li></ol>
+            </div>
+            <ul class="rk-src">
+              <li><span>Fitness</span><em>power curve, run marks</em><b>1,900</b></li>
+              <li><span>Consistency</span><em>52 training days in a row</em><b>260</b></li>
+              <li><span>Volume, 7 days</span><em>437 TSS of endurance</em><b>109</b></li>
+              <li class="off"><span>Strength</span><em>logged, never ranked</em><b>0</b></li>
+            </ul>
+          </div>
+          <div class="ph-card rk-board">
+            <div class="sx-wtop"><b>Athletes like you</b><span>Cycling · 70–80 kg</span></div>
+            <ol class="rk-list">
+              <li><span>2</span><b>Sofia</b><em>High-Output</em><i>4.99 W/kg</i></li>
+              <li><span>3</span><b>Nuno</b><em>High-Output</em><i>4.84 W/kg</i></li>
+              <li class="me"><span>4</span><b>You</b><em>Strong</em><i>4.73 W/kg</i></li>
+              <li><span>5</span><b>Joana</b><em>Strong</em><i>4.65 W/kg</i></li>
+            </ol>
+          </div>
+        </div></div>
+        <div class="sp-copy">
+          <h3>Earned, not bought.</h3>
+          <p>Your tier comes from fitness and consistency. Strength is logged but never counts, and nothing can be bought. Compare with athletes like you.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <p class="show-note">Sample athlete. Numbers are illustrative.</p>
+</div></section>
+
+<!-- Formas partilhadas: a turbina (lib/components/brand/) e os ícones de desporto das linhas de treino. -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <path id="blade" d="M84.7 79.0 C76.4 47.0 94.3 18.2 130.1 17.3 Q151.4 23.7 157.7 40.3 C146.0 55.5 127.1 65.3 113.0 77.5 Z" />
+    <path id="edge" d="M84.7 79.0 C76.4 47.0 94.3 18.2 130.1 17.3 C119.3 32.7 100.0 54.0 99.1 74.0 Z" />
+    <g id="rotor-shape">
+      <g><use href="#blade" fill="#ff6b2c" /><use href="#edge" fill="#ff9358" /></g>
+      <g transform="rotate(120 100 100)"><use href="#blade" fill="#ff6b2c" /><use href="#edge" fill="#ff9358" /></g>
+      <g transform="rotate(240 100 100)"><use href="#blade" fill="#ff6b2c" /><use href="#edge" fill="#ff9358" /></g>
+    </g>
+    <g id="mark-compact">
+      <circle cx="100" cy="100" r="88.5" fill="none" stroke="#ffffff" stroke-opacity="0.14" stroke-width="9" pathLength="360" stroke-dasharray="270 400" transform="rotate(133 100 100)" stroke-linecap="round" />
+      <circle cx="100" cy="100" r="88.5" fill="none" stroke="#ff6b2c" stroke-width="9" pathLength="360" stroke-dasharray="194.4 400" transform="rotate(133 100 100)" stroke-linecap="round" />
+    </g>
+    <symbol id="i-bike" viewBox="0 0 24 24"><circle cx="5.5" cy="16" r="3.5" /><circle cx="18.5" cy="16" r="3.5" /><path d="M5.5 16l4-8h6l3 8M9.5 8l3 8h-7M14 5h3" /></symbol>
+    <symbol id="i-run" viewBox="0 0 24 24"><circle cx="14" cy="4.5" r="1.8" /><path d="M6 20l3.5-5 3 2 1-6 3 3h3M8 9.5l4-2 2 3.5" /></symbol>
+    <symbol id="i-lift" viewBox="0 0 24 24"><path d="M3 9v6M6 7v10M18 7v10M21 9v6M6 12h12" /></symbol>
+  </defs>
+</svg>
+
+<section class="block" id="adapt"><div class="wrap">
+  <h2>Life changes. The plan does too.</h2>
+  <p class="lede">Tell the coach what happened, in plain words. It reads your load and recovery, proposes a new week and says why. Pick a morning.</p>
+  <div class="adapt">
+    <div class="adapt-left">
+      <div class="scenarios" role="tablist" aria-label="Example mornings">
+        <button type="button" role="tab" id="tab-legs" aria-controls="week-panel" aria-selected="true" data-s="legs"><b>Heavy squats yesterday</b><span>Strength load lands on the legs that ride.</span></button>
+        <button type="button" role="tab" id="tab-sleep" aria-controls="week-panel" aria-selected="false" tabindex="-1" data-s="sleep"><b>Slept 5 hours</b><span>Recovery below its usual range.</span></button>
+        <button type="button" role="tab" id="tab-time" aria-controls="week-panel" aria-selected="false" tabindex="-1" data-s="time"><b>Only 40 minutes today</b><span>Keep the part of the session that matters.</span></button>
+      </div>
+      <div class="convo" aria-live="polite">
+        <p class="bubble me" id="sc-msg">Squats felt heavy yesterday. RPE 9, not 8.</p>
+        <p class="bubble coach" id="sc-reply">That's more load than planned, and it lands on the same legs that ride. I moved the VO₂max intervals to Thursday and brought Thursday's easy spin to today. Nothing else changes.</p>
+      </div>
+    </div>
+    <div class="week-panel" id="week-panel" role="tabpanel" aria-labelledby="tab-legs">
+      <div class="week-head"><b>This week</b><span>23 – 29 Nov</span></div>
+      <ol class="aweek" id="aweek"></ol>
+      <p class="week-foot">Proposed, not applied. Nothing changes until you tap Apply.</p>
+    </div>
+  </div>
+  <div class="zone-key" aria-label="Zone colours"><span><i style="--c:#94A3B8"></i>Z1</span><span><i style="--c:#60A5FA"></i>Z2</span><span><i style="--c:#34D399"></i>Z3</span><span><i style="--c:#FBBF24"></i>Z4</span><span><i style="--c:#F87171"></i>Z5</span><em>One bar per block: width is time, height and colour are intensity.</em></div>
+</div></section>
+
+<section class="block" id="coach"><div class="wrap app-grid">
+  <div class="app-side">
+    <h2>Try it yourself.</h2>
+    <p class="lede">This is the chat from the app, running with a sample athlete's data. Ask about their training, or about Engine itself: plans, devices, privacy.</p>
+    <div class="chips" id="chips">
+      <button type="button">Can I do tomorrow's VO₂max session?</button>
+      <button type="button">Where does my critical power come from?</button>
+      <button type="button">How should I fuel Saturday's 3 h ride?</button>
+      <button type="button">Does it work with my Garmin?</button>
+      <button type="button">What does the founder place include?</button>
+      <button type="button">What happens to my data?</button>
+    </div>
+
+    <div class="thresholds">
+      <div class="th-head"><b>Thresholds</b><span>Sample athlete. Every number says where it came from.</span></div>
+      <div class="th">
+        <div class="th-main"><span class="th-label">Critical power · bike</span><span class="th-val">350<small>W</small></span></div>
+        <div class="th-meta"><span class="tag ok">Measured</span><span>14 Oct, from 2 maximal efforts</span><span>W′ 18.0 kJ</span></div>
+        <div class="band" aria-label="Error band plus or minus 2 percent"><i style="--w:8%"></i></div><span class="pm">± 2%</span>
+      </div>
+      <div class="th">
+        <div class="th-main"><span class="th-label">Critical speed · run</span><span class="th-val">3:50<small>/km</small></span></div>
+        <div class="th-meta"><span class="tag ok">Measured</span><span>2 Nov, from 3 races and tests</span><span>D′ 165 m</span></div>
+        <div class="band" aria-label="Error band plus or minus 3 percent"><i style="--w:12%"></i></div><span class="pm">± 3%</span>
+      </div>
+      <div class="th">
+        <div class="th-main"><span class="th-label">CSS · swim</span><span class="th-val">1:36<small>/100 m</small></span></div>
+        <div class="th-meta"><span class="tag est">Estimated</span><span>From your heart rate, no swim test yet</span></div>
+        <div class="band" aria-label="Error band plus or minus 7 percent"><i style="--w:28%"></i></div><span class="pm">± 7%</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="cphone">
+    <div class="cphone-in">
+      <div class="cphone-island" aria-hidden="true"></div>
+      <div class="chat-top">
+        <svg class="mini" id="chat-mark" viewBox="0 0 200 200" width="30" height="30" aria-hidden="true"><use href="#mark-compact" /><g class="rotor"><use href="#rotor-shape" /></g><circle cx="100" cy="100" r="27" fill="#0c0c0f" stroke="#ff6b2c" stroke-width="6" /></svg>
+        <div><b>engine</b><span id="chat-status">Read your week this morning</span></div>
+      </div>
+      <div class="log" id="chat-log" aria-live="polite">
+        <div class="m coach">I'm looking at a sample athlete: critical power 350 W, readiness 70, squats on Monday. Ask me anything about their week.</div>
+        <div class="m me">Can I move Saturday's long ride to Sunday? Family lunch.</div>
+        <div class="m coach">Yes. Sunday's run becomes an easy 40 minutes on Saturday, so you don't stack two long days.
+          <div class="plan-card" aria-label="Proposed changes">
+            <div class="pc-row">
+              <div class="pl-day"><span>Sat</span><b>28</b></div>
+              <span class="pl-sport run" aria-hidden="true"><svg><use href="#i-run" /></svg></span>
+              <div class="pl-info"><b>Easy run</b><span>75 min → 40 min</span></div>
+              <span class="pl-badge">Changed</span>
+              <div class="pl-strip"><i style="--f:5;--z:#94A3B8;--h:.3"></i><i style="--f:30;--z:#60A5FA;--h:.45"></i><i style="--f:5;--z:#94A3B8;--h:.3"></i></div>
+            </div>
+            <div class="pc-row">
+              <div class="pl-day"><span>Sun</span><b>29</b></div>
+              <span class="pl-sport bike" aria-hidden="true"><svg><use href="#i-bike" /></svg></span>
+              <div class="pl-info"><b>Long ride with tempo</b><span>Sat 28 → Sun 29</span></div>
+              <span class="pl-badge">Moved</span>
+              <div class="pl-strip"><i style="--f:15;--z:#94A3B8;--h:.3"></i><i style="--f:60;--z:#60A5FA;--h:.45"></i><i style="--f:20;--z:#34D399;--h:.6"></i><i style="--f:40;--z:#60A5FA;--h:.45"></i><i style="--f:20;--z:#34D399;--h:.6"></i><i style="--f:15;--z:#60A5FA;--h:.45"></i><i style="--f:10;--z:#94A3B8;--h:.3"></i></div>
+            </div>
+            <div class="pc-actions" aria-hidden="true"><span class="fake-btn primary">Apply</span><span class="fake-btn">Keep</span></div>
+          </div>
+        </div>
+      </div>
+      <form class="ask-row" id="chat-form">
+        <input type="text" name="q" maxlength="400" placeholder="Ask about training, or Engine" aria-label="Your question" autocomplete="off" />
+        <button class="btn small" type="submit">Ask</button>
+      </form>
+    </div>
+    <p class="chat-note">Built on Claude. Demo data only. Not medical advice.</p>
+  </div>
+</div></section>
+
+<section class="block"><div class="wrap">
+  <h2>What Engine doesn't know.</h2>
+  <p class="lede">Most apps hide their uncertainty. Engine prints it.</p>
+  <ul class="limits">
+    <li><b>It estimates.</b>When a threshold comes from a formula and not from your efforts, it says “estimated” and draws how wide the doubt is.</li>
+    <li><b>It doesn't diagnose.</b>The micronutrient view describes your log, not your body. Only tests and a health professional can say more.</li>
+    <li><b>The AI can be wrong.</b>So it shows the numbers behind each answer, and nothing changes without your approval.</li>
+    <li><b>The AI is your choice.</b>The coach is off until you turn it on, and one switch turns it off again.</li>
+  </ul>
+</div></section>
+
+<section class="block" id="pricing"><div class="wrap">
+  <h2>Free keeps your numbers. Always.</h2>
+  <div class="plans">
+    <div class="plan"><h3>Free</h3><div class="p">€0</div><ul><li>Thresholds, readiness and log</li><li>Basic nutrition</li><li>Coach: 5 questions a month</li></ul></div>
+    <div class="plan"><h3>Premium</h3><div class="p">€14.99<small>/ month</small></div><ul><li>or €99.99 a year</li><li>Adaptive plan and weekly review</li><li>Coach with a fair monthly budget</li></ul></div>
+    <div class="plan"><h3>Pro</h3><div class="p">€24.99<small>/ month</small></div><ul><li>or €179.99 a year</li><li>Everything in Premium</li><li>Over 3× more coach</li></ul></div>
+  </div>
+  <div class="founder"><div><b>Founder: Pro features at €79.99 a year.</b><p>With Premium coach use. For the first 200 subscribers, for as long as the subscription stays active. 14 days with everything, from your first synced data.</p></div><a class="btn" href="#founder">Create your account</a></div>
+</div></section>
+
+<section class="block" id="faq"><div class="wrap">
+  <h2>Questions.</h2>
+  <div class="faq">
+    <details><summary>I already use Garmin or TrainingPeaks.</summary><p>Keep them. Engine reads your data and adds what they leave out: the gym, the food, and the source of each number.</p></details>
+    <details><summary>Do I need a power meter?</summary><p>No. Running uses critical speed, swimming uses CSS, and heart rate covers the rest.</p></details>
+    <details><summary>Does it work with my watch?</summary><p>Apple Health, Health Connect, Polar and intervals.icu (Garmin, COROS and Zwift through it) today. Wahoo and Suunto are in review.</p></details>
+    <details><summary>Is the AI making things up?</summary><p>It can be wrong, so it shows the numbers behind each answer and changes nothing without your approval. It is built on Claude, and it only receives your data if you turn it on.</p></details>
+    <details><summary>Is my data safe?</summary><p>Hosted in the EU (Ireland). Profiles are private by default. You can export or delete everything in the app, and the AI has an off switch.</p></details>
+    <details><summary>What happens after the trial?</summary><p>You move to Free. Your data stays visible and yours.</p></details>
+  </div>
+</div></section>
+
+<section class="block" id="founder"><div class="wrap join">
+  <div>
+    <h2>Create your account.</h2>
+    <p class="lede">Your Engine account, ready before the app is on your phone. Founder places go to the first 200 subscribers, and accounts created here are told first.</p>
+    <ol class="how">
+      <li><b>Create your account</b>Email and a password. Thirty seconds.</li>
+      <li><b>Install Engine</b>We email the install link as founder places open.</li>
+      <li><b>Sign in and sync</b>Connect your watch. Your 14 days with everything start at the first synced session.</li>
+    </ol>
+  </div>
+  <form class="form" id="join-form" novalidate>
+    <label>Email<input type="email" name="email" autocomplete="email" required /></label>
+    <label>Password<input type="password" name="password" autocomplete="new-password" minlength="8" required /><span class="hint">At least 8 characters.</span></label>
+    <label>What do you use today? (optional)<input type="text" name="uses" maxlength="200" placeholder="Garmin, TrainingPeaks, a notebook…" /></label>
+    <label class="check"><input type="checkbox" name="consent" /><span>I am 18 or over and agree to the <a href="terms.html">Terms</a> and the <a href="privacy.html">Privacy policy</a>, and to be emailed about my account and the launch.</span></label>
+    <button class="btn" type="submit">Create account</button>
+    <p class="status" id="join-status" role="status"></p>
+  </form>
+</div></section>
+
+</main>
+
+<a class="fab" href="#coach" aria-label="Ask the coach"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z" /></svg>Ask</a>
+
+<footer><div class="wrap">
+  <span class="grow">Made in Portugal by one person who trains. Not medical advice.</span>
+  <a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="delete-account.html">Delete account</a><a href="mailto:getengine.app@gmail.com">Contact</a>
+  <p class="credits">Food data: INSA – Tabela da Composição de Alimentos v 7.1 (2026), USDA FoodData Central, Anses-Ciqual 2025.</p>
+</div></footer>
+
+<script>window.ENGINE_CFG = {"url":"https://mkfxwsvscxqfayuckhcf.supabase.co","key":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im1rZnh3c3ZzY3hxZmF5dWNraGNmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzYxNzMyMjksImV4cCI6MjA5MTc0OTIyOX0.uEuR2JCPjdx9p32mbUE7RaeSygPgj0aao0q-HZKsbiw"};</script>
+<script src="app.js" defer></script>
 </body>
 </html>
